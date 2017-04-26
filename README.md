@@ -18,3 +18,15 @@ Just run
 ```bash
 bash prepare.sh
 ```
+
+## Start training
+
+```bash
+python train.py --gpus 0
+```
+
+If you want to use multiple GPUs:
+
+```bash
+python train.py --gpus 0 1 2 3
+```

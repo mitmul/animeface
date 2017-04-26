@@ -89,6 +89,6 @@ trainer.extend(extensions.PlotReport(
     ['main/accuracy', 'validation/main/accuracy'],
     'epoch', file_name='accuracy.png'))
 
-trainer.extend(TestModeEvaluator(valid_iter, model, device=gpu_id))
+trainer.extend(TestModeEvaluator(valid_iter, model, device=devices['main']))
 trainer.extend(create_lr_drop(drop_ratio=0.1), trigger=(40, 'epoch'))
 trainer.run()

@@ -18,6 +18,7 @@ class Illust2Vec(Chain):
         w = chainer.initializers.HeNormal()
 
         if not os.path.exists(self.PKL_FN):
+            print('Converting Caffe model...')
             model = CaffeFunction(self.CAFFEMODEL_FN)
             pickle.dump(model, open(self.PKL_FN, 'wb'))
         else:
