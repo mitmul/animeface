@@ -1,5 +1,6 @@
 # Copyright (c) 2017 Shunta Saito
 
+import os
 import pickle
 
 import chainer
@@ -44,4 +45,3 @@ class Illust2Vec(Chain):
         h = F.dropout(F.relu(self.fc6(h)), train=self.train)
         h = F.dropout(F.relu(self.fc7(h)), train=self.train)
         return self.fc8(h)
-
