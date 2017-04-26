@@ -5,6 +5,9 @@
 
 import argparse
 
+import matplotlib  # isort:skip
+matplotlib.use('Agg')  # isort:skip
+
 import chainer
 import chainer.links as L
 from chainer import datasets
