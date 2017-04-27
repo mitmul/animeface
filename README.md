@@ -33,8 +33,8 @@ The accuracy on validation dataset after 120 epochs is 0.916953.
 
 ### Loss plot
 
-![](https://raw.githubusercontent.com/mitmul/animeface/wiki/images/loss.png)
+![](https://raw.githubusercontent.com/wiki/mitmul/animeface/images/loss.png)
 
 ### Accuracy plot
 
-![](https://raw.githubusercontent.com/mitmul/animeface/wiki/images/accuracy.png)
+![](https://raw.githubusercontent.com/wiki/mitmul/animeface/images/accuracy.png)
