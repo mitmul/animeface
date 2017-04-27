@@ -19,7 +19,7 @@ from dataset import AnimeFaceDataset
 from model import Illust2Vec
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--gpus', type=int, nargs='*', default=-1)
+parser.add_argument('--gpus', type=int, nargs='*', default=0)
 parser.add_argument('--batchsize', type=int, default=128)
 args = parser.parse_args()
 
@@ -72,7 +72,7 @@ def create_lr_drop(drop_ratio=0.1):
 
 
 # Prepare trainer
-trainer = training.Trainer(updater, (120, 'epoch'), out='AnimeFace-result')
+trainer = training.Trainer(updater, (120, 'epoch'))
 trainer.extend(extensions.LogReport())
 trainer.extend(extensions.observe_lr())
 

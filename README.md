@@ -22,11 +22,19 @@ bash prepare.sh
 ## Start training
 
 ```bash
-python train.py --gpus 0
+python train.py --gpus 0 --batchsize 128
 ```
 
-If you want to use multiple GPUs:
+It takes about 30 minutes to finish the training on Pascal TITAN X (12GB memory).
 
-```bash
-python train.py --gpus 0 1 2 3
-```
+## Result
+
+The accuracy on validation dataset after 120 epochs is 0.916953.
+
+### Loss plot
+
+![](https://raw.githubusercontent.com/mitmul/animeface/wiki/images/loss.png)
+
+### Accuracy plot
+
+![](https://raw.githubusercontent.com/mitmul/animeface/wiki/images/accuracy.png)
